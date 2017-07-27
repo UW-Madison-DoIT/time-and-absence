@@ -1,0 +1,26 @@
+[
+  { 
+    "name" : "Frame Version",
+    "value" : "3.1.4"
+  },
+  { 
+    "name" : "Git Tags",
+    "value" : "uw-frame-maven-3.1.4"
+  },
+  { 
+    "name" : "Git Branch",
+    "value" : "e61d8dc35761f328a939892bcce121f29cc4822d"
+  },
+  { 
+    "name" : "Git Commit ID",
+    "value" : "e61d8dc"
+  },
+  { 
+    "name" : "Git Dirty",
+    "value" : "false"
+  },
+  { 
+    "name" : "Build Time",
+    "value" : "20.03.2017 @ 16:11:31 CDT"
+  }
+]
