@@ -16,11 +16,6 @@ define(['angular'], function(angular) {
               "title" : "App Seed Beta Feature",
               "description" : "This is just an example of a toggle. Look at your localStorage after you switch this on for the first time."
             }
-          ],
-          'SERVICE_LOC' : [
-            {
-              "leaveBalancesURL" : "staticFeeds/leaveBalances.json"
-            }
           ]
         },
         )
