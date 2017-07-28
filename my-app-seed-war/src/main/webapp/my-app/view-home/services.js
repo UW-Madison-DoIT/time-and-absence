@@ -7,18 +7,18 @@ define(['angular', 'jquery'], function(angular, $) {
     function($http) {
 
       var getLeaveBalances = function () {
-        return $http.get('/staticFeeds/leaveBalances.json', { cache: true })
+        return $http.get('http://localhost:8080/my-app/view-home/resources/staticFeeds/leaveBalances.json', { cache: true })
           .then(function (result) {
             return result.data;
           },
           function (reason) {
-            //TBD
+            return null;
           }
           );
       };
 
     return {
-      getLeaveBalances: getLeaveBalances,
+      getLeaveBalances: getLeaveBalances
     };
   }]);
 });
