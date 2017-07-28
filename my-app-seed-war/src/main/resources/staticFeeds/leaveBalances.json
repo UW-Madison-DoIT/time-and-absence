@@ -1,0 +1,14 @@
+{
+    "balances": [
+        {
+            "Entitlement": "Vacation",
+            "Balance": "102.5",
+            "title": "Soda jerk"
+        },
+        {
+            "Entitlement": "Sick",
+            "Balance": "13.5",
+            "title": "manager"
+        }
+    ]
+}

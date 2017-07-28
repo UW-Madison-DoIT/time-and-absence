@@ -7,8 +7,8 @@ define(['angular'], function(angular) {
         //see http://uw-madison-doit.github.io/uw-frame/latest/#/md/configuration for howto
         .constant('OVERRIDE', {
           'NAMES' : {
-            'title' : 'My UW: Time And Absence',
-            'fname' : 'timeAbsence'
+            'title' : 'Time And Absence',
+            'fname' : 'time-and-absence'
           },
           'APP_BETA_FEATURES' : [
             {
@@ -16,8 +16,14 @@ define(['angular'], function(angular) {
               "title" : "App Seed Beta Feature",
               "description" : "This is just an example of a toggle. Look at your localStorage after you switch this on for the first time."
             }
+          ],
+          'SERVICE_LOC' : [
+            {
+              "leaveBalancesURL" : "staticFeeds/leaveBalances.json"
+            }
           ]
-        })
+        },
+        )
 
     return config;
 

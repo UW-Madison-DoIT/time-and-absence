@@ -1,13 +1,21 @@
 <!-- Note: <frame-page> is a uw-frame directive that is available for use by frame apps.
     For more information, see: http://uw-madison-doit.github.io/uw-frame/latest/#/md/directives -->
-<frame-page app-title="My App Title" white-background='true'>
+<frame-page app-title="Time And Absence" white-background='true'>
     <!-- Note: Directives with the "md-" prefix are from the Angular Material framework.
         For more information, see: https://material.angularjs.org/latest -->
     <md-content class="portlet-frame">
+    <div ng-controller="LeaveBalanceController as lvBalCtrl" class="view-home">
         <md-tabs md-dynamic-height md-border-bottom>
-            <md-tab class="md-primary" label="View One">
+            <md-tab class="md-primary" label="Leave Balances">
                 <!-- View One Content -->
                 <md-content class="md-padding">
+                <ol ng-init="names=['John', 'Mary', 'Cate', 'Suz']">
+                    <li ng-repeat="name in names">
+                        <span ng-class-odd="'odd'" ng-class-even="'even'">
+                    {{name}}
+                </span>
+                    </li>
+                </ol>
                     <h1 class="md-display-1">Module Overview</h1>
                     <p>The <code>/view-home</code> directory is just an example module directory, but you can have many of these
                         in your project. You should have one module directory for each distinct view or module in your application.
@@ -36,7 +44,7 @@
                     </ul>
                 </md-content>
             </md-tab>
-            <md-tab class="md-primary" label="View Two">
+            <md-tab class="md-primary" label="Leave Reports">
                 <!-- View Two Content -->
                 <md-content class="md-padding">
                     <subview-directive></subview-directive>
