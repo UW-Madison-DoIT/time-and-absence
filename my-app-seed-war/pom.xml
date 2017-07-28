@@ -5,8 +5,8 @@
 		<artifactId>my-app-seed</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>TimeAbsence</artifactId>
-	<name>Time And Absence</name>
+	<artifactId>my-app-seed-wa</artifactId>
+	<name>My App Seed War</name>
 	<description>Frame based app for UW Time And Absence</description>
 	<packaging>war</packaging>
 
