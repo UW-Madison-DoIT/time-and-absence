@@ -1,33 +1,40 @@
-<div ng-controller="LeaveBalanceController as leaveBalanceCtrl" >
+<div ng-controller="LeaveBalanceController as leaveBalanceCtrl">
 
-<frame-page app-title="Time And Absence" white-background='true'>
-    <!-- Note: Directives with the "md-" prefix are from the Angular Material framework.
+    <frame-page app-title="Time And Absence" white-background='true'>
+        <!-- Note: Directives with the "md-" prefix are from the Angular Material framework.
         For more information, see: https://material.angularjs.org/latest -->
-    <md-content class="portlet-frame">
-    <div ng-controller="LeaveBalanceController as lvBalCtrl" class="view-home">
-        <md-tabs md-dynamic-height md-border-bottom>
-            <md-tab class="md-primary" label="Leave Balances">
-                <!-- View One Content -->
-                
-                <md-content class="md-padding">
-                    TABLE HEADER
-                <ol >
-                    <li ng-repeat="li ng-repeat="balance in balances"">
-                        
-                    {{Entitlement}}
-                
-                    </li>
-                </ol>
-                    
-                </md-content>
-            </md-tab>
-            <md-tab class="md-primary" label="Leave Reports">
-                <!-- View Two Content -->
-                <md-content class="md-padding">
-                    <subview-directive></subview-directive>
-                </md-content>
-            </md-tab>
-        </md-tabs>
-    </md-content>
-</frame-page>
-</div>
+        <md-content class="portlet-frame">
+            <div ng-controller="LeaveBalanceController as lvBalCtrl" class="view-home">
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab class="md-primary" label="Leave Balances">
+                        <!-- View One Content -->
+                        <md-content class="md-padding">
+                            {{greeting}}
+                            <md-list>
+                                <md-list-item ng-repeat="balance in balances">
+                                    <div class="md-list-item-text">
+                                        <h3>{{balance.Entitlements}}</h3>
+                                        <p>{{balance.balance}}</p>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                            <ul>
+                                <li ng-repeat="balance in balances">
+
+                                    {{balance.Entitlement}}
+
+                                </li>
+                            </ul>
+
+                        </md-content>
+                    </md-tab>
+                    <md-tab class="md-primary" label="Leave Reports">
+                        <!-- View Two Content -->
+                        <md-content class="md-padding">
+                            <subview-directive></subview-directive>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+        </md-content>
+    </frame-page>
+    </div>
