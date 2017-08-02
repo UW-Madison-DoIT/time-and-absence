@@ -16,6 +16,11 @@ define(['angular'], function(angular) {
               "title" : "App Seed Beta Feature",
               "description" : "This is just an example of a toggle. Look at your localStorage after you switch this on for the first time."
             }
+          ],
+          'HRS_URLS' :[
+            {
+              "help" : "https://uwservice.wisc.edu/help/time-absence.php"
+            }
           ]
         },
         )

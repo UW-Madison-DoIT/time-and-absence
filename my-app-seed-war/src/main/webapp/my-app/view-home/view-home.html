@@ -3,28 +3,38 @@
     <frame-page app-title="Time And Absence" white-background='true'>
         <!-- Note: Directives with the "md-" prefix are from the Angular Material framework.
         For more information, see: https://material.angularjs.org/latest -->
-        <md-content class="portlet-frame">
+        <md-content class="portlet-frame" layout="column" >
             <div ng-controller="LeaveBalanceController as lvBalCtrl" class="view-home">
                 <md-tabs md-dynamic-height md-border-bottom>
                     <md-tab class="md-primary" label="Leave Balances">
                         <!-- View One Content -->
                         <md-content class="md-padding">
-                            {{greeting}}
+                            <section layout="row" layout-sm="column" layout-align="end end" layout-wrap>
+                                <md-button class="md-primary" ng-href=" {{helpLink}}" target="_blank">Help</md-button>
+                            </section>
+
+                           
                             <md-list>
+                                <md-list-item>
+                                    <div class="md-list-item-text" layout="row" layout-align="start start">
+                                        <span>Entitlement</span>
+                                        <span flex="5"></span>
+                                        <span>Balance</span>
+                                        <span ng-show={{showTitle}}>Other</span>
+                                    </div>
+                                </md-list-item>
                                 <md-list-item ng-repeat="balance in balances">
-                                    <div class="md-list-item-text">
-                                        <h3>{{balance.Entitlements}}</h3>
-                                        <p>{{balance.balance}}</p>
+                                    <div class="md-list-item-text" layout="row" layout-align="start start">
+                                        <span>{{balance.Entitlement}}</span>
+                                        <span flex="5"></span>
+                                        <span flex="30">{{balance.Balance}}</span>
+                                        <span flex="5"></span>
+                                        <div ng-hide=!{{showTitle}}>
+                                            <span flex="30">{{balance.title}}</span>
+                                        </div>
                                     </div>
                                 </md-list-item>
                             </md-list>
-                            <ul>
-                                <li ng-repeat="balance in balances">
-
-                                    {{balance.Entitlement}}
-
-                                </li>
-                            </ul>
 
                         </md-content>
                     </md-tab>
