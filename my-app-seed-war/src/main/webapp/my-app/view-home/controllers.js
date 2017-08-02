@@ -8,6 +8,7 @@ define(['angular', 'jquery'], function(angular, $) {
     ['$scope','hrsService', 'NAMES',
     function($scope, hrsService, NAMES){
         $scope.helpLink= NAMES.title;
+        //TODO: WHY CANT I GET THE HRS_URLS
         $scope.balances = [];
         hrsService.getLeaveBalances().then(
             function(balances) {

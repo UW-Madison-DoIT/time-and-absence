@@ -29,16 +29,20 @@
                                         <span flex="5"></span>
                                         <span flex="30">{{balance.Balance}}</span>
                                         <span flex="5"></span>
-                                        <div ng-hide=!{{showTitle}}>
+                                        <div ng-show={{showTitle}}>
                                             <span flex="30">{{balance.title}}</span>
                                         </div>
                                     </div>
                                 </md-list-item>
                             </md-list>
+                             <section layout="row" layout-sm="row" layout-align="center center" layout-wrap>
+                                <md-button class="md-primary" ng-href="http://uwservice.wisc.edu/docs/forms/am-unclassified-leave-report.pdf" target="_blank">Unclassified Leave Report</md-button>
+                           <md-button class="md-primary" ng-href="http://uwservice.wisc.edu/docs/forms/am-unclassified-leave-report-summer.pdf" target="_blank">Unclassified Summer Session/ Service Leave Report</md-button>
+                            </section>
 
                         </md-content>
                     </md-tab>
-                    <md-tab class="md-primary" label="Leave Reports">
+                    <md-tab class="md-raised" label="Leave Reports" >
                         <!-- View Two Content -->
                         <md-content class="md-padding">
                             <subview-directive></subview-directive>
