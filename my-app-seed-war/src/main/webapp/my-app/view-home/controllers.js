@@ -30,6 +30,11 @@ define(['angular', 'jquery'], function(angular, $) {
             }
         )
     }])
+    .controller('LeaveReportController', 
+    ['$scope', 'hrsService',
+    function($scope, hrsService){
+        
+    }])
 });
 /*--
 'use strict';
