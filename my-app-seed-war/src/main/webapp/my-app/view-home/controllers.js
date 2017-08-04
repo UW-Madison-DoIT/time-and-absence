@@ -33,7 +33,14 @@ define(['angular', 'jquery'], function(angular, $) {
     .controller('LeaveReportController', 
     ['$scope', 'hrsService',
     function($scope, hrsService){
-        
+        $scope.outstandingLeaveReportURL = "http://www.lonelyplanet.com";
+        hrsService.getLeaveReports().then(
+            function(reports) {
+                if(reports){
+                    $scope.reports = reports;
+                }
+            }
+        )
     }])
 });
 /*--
